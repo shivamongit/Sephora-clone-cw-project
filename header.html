@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="shortcut icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <style>
+
+
+
+
+
+
+
+
+
+
+        .nwc-hide-scrollbar {
+            position: fixed;
+            overflow-y: scroll
+        }
+
+        .nwc-custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px
+        }
+
+        .nwc-custom-scrollbar::-webkit-scrollbar-track {
+            background: #e4e4e4
+        }
+
+        .nwc-custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #a7a7a7
+        }
+
+        .nwc-hide {
+            display: none !important
+        }
+
+        .nwc-text-primary {
+            color: #f39 !important
+        }
+
+
+
+
+
+        .nwc-btn-primary-txt {
+            border: 0;
+            color: #f39
+        }
+
+
+
+        .nwc-btn-primary {
+            background: #f39;
+            color: #fff;
+            border-color: #f39
+        }
+
+
+        .nwc-btn-xs {
+            font-size: .77778rem
+        }
+
+        .nwc-btn-sm {
+            font-size: .88889rem
+        }
+
+        .nwc-grid-col {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-left: 7.5px;
+            padding-right: 7.5px
+        }
+
+        .nwc-grid-col-xs {
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;
+            -ms-flex-preferred-size: 0;
+            -ms-flex-positive: 1
+        }
+
+
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm {
+                flex-grow: 1;
+                flex-basis: 0;
+                max-width: 100%;
+                -ms-flex-preferred-size: 0;
+                -ms-flex-positive: 1
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-1 {
+                flex: 0 0 8.33333%;
+                max-width: 8.33333%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-2 {
+                flex: 0 0 16.66667%;
+                max-width: 16.66667%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-3 {
+                flex: 0 0 25%;
+                max-width: 25%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-4 {
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-5 {
+                flex: 0 0 41.66667%;
+                max-width: 41.66667%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-6 {
+                flex: 0 0 50%;
+                max-width: 50%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-7 {
+                flex: 0 0 58.33333%;
+                max-width: 58.33333%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-8 {
+                flex: 0 0 66.66667%;
+                max-width: 66.66667%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-9 {
+                flex: 0 0 75%;
+                max-width: 75%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-10 {
+                flex: 0 0 83.33333%;
+                max-width: 83.33333%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-11 {
+                flex: 0 0 91.66667%;
+                max-width: 91.66667%
+            }
+        }
+
+        @media screen and (min-width:769px) {
+            .nwc-grid-col-sm-12 {
+                flex: 0 0 100%;
+                max-width: 100%
+            }
+        }
+
+        .nwc-grid-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px
+        }
+
+        .nwc-grid-row {
+            flex-wrap: wrap;
+            display: flex;
+            margin-left: -7.5px;
+            margin-right: -7.5px
+        }
+
+        .nwc-img {
+            contain: style layout
+        }
+
+        .nwc-inp-container {
+            position: relative;
+            display: inline-flex;
+            cursor: pointer
+        }
+
+        .nwc-inp {
+            border: 2px solid #d4d4d4;
+            padding: 6px;
+            outline: 0
+        }
+
+        .nwc-inp[disabled] {
+            cursor: not-allowed
+        }
+
+        .nwc-inp-primary-txt {
+            border: 0;
+            color: #f39
+        }
+
+        .nwc-inp-primary {
+            border-color: #f39
+        }
+
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield
+        }
+
+        .nwc-inp-xs {
+            min-width: .77778rem;
+            min-height: .77778rem;
+            font-size: .77778rem
+        }
+
+        .nwc-inp-sm {
+            min-width: .88889rem;
+            min-height: .88889rem;
+            font-size: .88889rem
+        }
+
+        .nwc-inp-hide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            border: 0;
+            min-width: 1px;
+            max-width: 1px;
+            min-height: 1px;
+            max-height: 1px;
+            background: 0 0;
+            color: transparent;
+            outline: 0;
+            caret-color: transparent
+        }
+
+        @-webkit-keyframes loaderAnimation {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            to {
+                -webkit-transform: rotate(1turn);
+                transform: rotate(1turn)
+            }
+        }
+
+        @keyframes loaderAnimation {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            to {
+                -webkit-transform: rotate(1turn);
+                transform: rotate(1turn)
+            }
+        }
+
+        @font-face {
+            font-family: Avenir-Next;
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Regular.eot);
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Regular.eot#iefix) format("embedded-opentype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Regular.woff) format("woff"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Regular.ttf) format("truetype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Regular.svg) format("svg");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Avenir-Next;
+            font-weight: 600;
+            font-style: normal;
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Medium.eot);
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Medium.eot#iefix) format("embedded-opentype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Medium.woff) format("woff"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Medium.ttf) format("truetype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Medium.svg) format("svg");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Avenir-NextBold;
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Bold.eot);
+            src: url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Bold.eot#iefix) format("embedded-opentype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Bold.woff) format("woff"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Bold.ttf) format("truetype"), url(https://static.nnnow.com/fonts/avenirnext/AvenirNext-Bold.svg) format("svg");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: icomoon;
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://static.nnnow.com/fonts/icomoon/icomoon.eot?shfbafa=);
+            src: url(https://static.nnnow.com/fonts/icomoon/icomoon.eot?shfbafa=#iefix) format("embedded-opentype"), url(https://static.nnnow.com/fonts/icomoon/icomoon.woff?shfbafa=) format("woff"), url(https://static.nnnow.com/fonts/icomoon/icomoon.ttf?shfbafa=) format("truetype"), url(https://static.nnnow.com/fonts/icomoon/icomoon.svg?shfbafa=#icomoon) format("svg");
+            font-display: swap
+        }
+
+        i {
+            font-family: icomoon
+        }
+
+        i {
+            font-family: icomoon !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            -webkit-font-feature-settings: normal;
+            font-feature-settings: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .icomoon-sephora_arrow_right:before {
+            content: ""
+        }
+
+        .icomoon-sephora_arrow_left:before {
+            content: ""
+        }
+
+        .icomoon-loyalty_main:before {
+            content: ""
+        }
+
+        .icomoon-delivery-web:before {
+            content: ""
+        }
+
+        .icomoon-get-app:before {
+            content: ""
+        }
+
+        .icomoon-heart-o:before {
+            content: ""
+        }
+
+        .icomoon-person1:before {
+            content: ""
+        }
+
+        .icomoon-bag1:before {
+            content: ""
+        }
+
+        .icomoon-search3:before {
+            content: ""
+        }
+
+        .icomoon-marker3:before {
+            content: ""
+        }
+
+        .icomoon-shop-store:before {
+            content: ""
+        }
+
+        .icomoon-arrow_right1:before {
+            content: ""
+        }
+
+        .icomoon-person:before {
+            content: ""
+        }
+
+        .icomoon-marker:before {
+            content: ""
+        }
+
+        .icomoon-bag:before {
+            content: ""
+        }
+
+        .icomoon-nnnow_logo:before {
+            content: ""
+        }
+
+        .icomoon-marker2:before {
+            content: ""
+        }
+
+        .icomoon-search2:before {
+            content: ""
+        }
+
+        .icomoon-heart2:before {
+            content: ""
+        }
+
+        .icomoon-arrow_left:before {
+            content: ""
+        }
+
+        .icomoon-arrow_right:before {
+            content: ""
+        }
+
+        .icomoon-arrow_top:before {
+            content: ""
+        }
+
+        .icomoon-arrow_bottom:before {
+            content: ""
+        }
+
+        .icomoon-search:before {
+            content: ""
+        }
+
+        .icomoon-heart:before {
+            content: ""
+        }
+
+        .icomoon-star:before {
+            content: ""
+        }
+
+        .icomoon-list:before {
+            content: ""
+        }
+
+        .icomoon-eye:before {
+            content: ""
+        }
+
+        .icomoon-menu:before {
+            content: ""
+        }
+
+        .icomoon-play2:before {
+            content: ""
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box
+        }
+
+        body,
+        html {
+            width: 100%;
+            min-height: 100%;
+            height: 100vh;
+            font-size: 18px;
+            font-family: Avenir-Next, sans-serif;
+            letter-spacing: .3px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-overflow-scrolling: touch
+        }
+
+        body {
+            overflow-y: scroll !important
+        }
+
+        button,
+        input {
+            font-family: Avenir-Next, sans-serif
+        }
+
+        h1 {
+            letter-spacing: .7px
+        }
+
+        .nw-app-body {
+            position: relative;
+            min-height: calc(100vh - 145px)
+        }
+
+        .nw-app-body.no-padding {
+            padding: 0
+        }
+
+        a {
+            outline: 0
+        }
+
+        .nw-storycarousel-dotswrapper {
+            justify-content: center;
+            align-items: center;
+            display: flex
+        }
+
+        .nwc-hide-scrollbar {
+            -ms-scroll-chaining: none;
+            overscroll-behavior: none
+        }
+
+        .nw-sub-navtreeholder {
+            display: block
+        }
+
+        .nwc-anchortag {
+            text-decoration: none
+        }
+
+        .nw-navlist-ul {
+            padding: 0;
+            list-style: none
+        }
+
+        .nw-navlist-ul.nw-nnnow-header {
+            background: rgba(0, 0, 0, .4);
+            color: #fff
+        }
+
+
+
+
+        .nw-sub-navtreeholder.is-active {
+            display: flex
+        }
+
+        .nw-navtree-list {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            font-size: .66667rem;
+            list-style: none
+        }
+
+        .nw-navtree-level2 {
+            width: 100%;
+            padding: 30px 12px;
+            background: #fff
+        }
+
+        .nw-navtree-link {
+            display: block;
+            color: #000;
+            text-decoration: none
+        }
+
+        .nw-navtree-link:hover {
+            color: #f39
+        }
+
+        .nw-navtree-link-level2 {
+            font-weight: 600;
+            color: #0182cb
+        }
+
+        .nw-navtree-items2 {
+            display: inline-block;
+            margin-bottom: 20px;
+            min-width: 140px;
+            padding: 0 50px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+
+
+        .nw-login-order {
+            padding-right: 12px;
+            font-size: .88889rem;
+            color: #abc72c
+        }
+
+        .nw-header {
+            position: relative;
+            z-index: 99
+        }
+
+        .nw-header-linksbtns {
+            margin-left: 20px;
+            padding: 10px 0;
+            cursor: pointer;
+            font-size: .77778rem;
+            white-space: nowrap
+        }
+
+        .nw-header-seperator {
+            margin-left: 20px;
+            color: #d6d6d6
+        }
+
+        .nw-brandheader-topbarrow {
+            justify-content: center;
+            align-items: center;
+            margin-left: -15px;
+            margin-right: -15px;
+            min-height: 45px
+        }
+
+        .nw-brandheader-topbarcol {
+            max-width: 1230px
+        }
+
+        .nw-brandheader-topbarcols {
+            flex-wrap: nowrap
+        }
+
+        .nw-brandheader-topbarpromo {
+            justify-content: center;
+            flex-grow: 2;
+            display: flex
+        }
+
+        .nw-brandheader-topbarleftlinks {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex
+        }
+
+        .nw-brandheader-topbarrightlinks {
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            display: flex
+        }
+
+        .nw-brandheader-mainbarrow {
+            position: relative;
+            z-index: 3;
+            justify-content: center
+        }
+
+        .nw-brandheader-mainbarcol {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            max-width: 1230px;
+            width: 100%;
+            height: 100%
+        }
+
+        .nw-brandheader-navigationrow {
+            justify-content: center;
+            margin-top: -5px
+        }
+
+        .nw-brandheader-navigationcol {
+            max-width: 1230px
+        }
+
+        .nw-brandheader-searchbarcol {
+            align-items: center;
+            display: flex;
+            min-width: 280px;
+            max-width: 280px
+        }
+
+        .nw-brandheader-logocol {
+            justify-content: center;
+            align-items: center;
+            flex-grow: 12;
+            display: flex;
+            height: 100px
+        }
+
+        .nw-brandheader-logo {
+            position: relative;
+            z-index: 1;
+            height: 100%
+        }
+
+        .nw-brandheader-logo .nw-logo-img {
+            max-height: 100%
+        }
+
+        .nw-brandheader-maibarrowcols {
+            flex-wrap: nowrap;
+            height: 100%
+        }
+
+        .nw-brandheader-buttonscol {
+            align-items: center;
+            display: flex
+        }
+
+
+
+        .nw-brandheader-topbarrow {
+            background: #f3f3f3
+        }
+
+        .nw-brandheader-navigationcol {
+            box-shadow: inset 0 -1px 0 0 #f3f3f3
+        }
+
+        .nw-store-list {
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            list-style: none
+        }
+
+
+
+        .nw-login-input {
+            margin: 15px 0 5px;
+            border: 1px solid #000;
+            width: 100%;
+            height: 40px;
+            padding: 0 32px 0 10px;
+            background: #fff;
+            cursor: auto;
+            font-size: .77778rem;
+            color: #000;
+            outline: 0
+        }
+
+        .nw-form {
+            margin: 10px 0;
+            width: 100%;
+            padding: 0 15px
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-form {
+                padding: 0 13px
+            }
+        }
+
+        .nw-login-btn {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            width: 100%;
+            padding: 10px 0;
+            cursor: pointer;
+            font-size: .88889rem;
+            font-family: Avenir-NextBold, sans-serif;
+            text-transform: uppercase
+        }
+
+        .nw-login-link {
+            float: right;
+            margin: 5px 0 25px;
+            border: 0;
+            border-bottom: 1px solid #191919;
+            padding: 3px 0;
+            background: 0 0;
+            cursor: pointer;
+            font-size: .77778rem;
+            color: #191919;
+            outline: 0
+        }
+
+        .nw-login-container {
+            padding: 24px 10px
+        }
+
+        .eye-icon {
+            position: absolute;
+            top: 27px;
+            right: 10px;
+            cursor: pointer;
+            font-size: .77778rem;
+            outline: 0
+        }
+
+        .nw-login2-sub {
+            justify-content: space-between;
+            display: flex;
+            margin-top: 20px
+        }
+
+        .nw-search {
+            position: relative;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            height: 100%
+        }
+
+        .nw-search-container {
+            height: 100vh;
+            background: #fff
+        }
+
+        .nw-search-input {
+            width: 100%;
+            padding: 20px 10px;
+            font-weight: 700;
+            letter-spacing: .04rem
+        }
+
+        .nwc-search-inp-container {
+            display: flex;
+            width: 100%
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-search {
+                position: absolute
+            }
+
+            .nw-search-container {
+                height: auto
+            }
+
+            .nw-search-input {
+                margin: 0 auto;
+                max-width: 1200px;
+                padding: 30px 0
+            }
+        }
+
+        .nw-search-icon {
+            justify-content: space-around;
+            display: flex
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-search-icon {
+                justify-content: flex-start
+            }
+        }
+
+        .nw-search-items-color {
+            flex-wrap: wrap;
+            display: flex;
+            padding: 15px 15px 5px
+        }
+
+        @-webkit-keyframes slideBottomUp {
+            0% {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+
+            to {
+                -webkit-transform: translate(0);
+                transform: translate(0)
+            }
+        }
+
+        .nw-offer-code {
+            padding-top: 5px;
+            color: #f39
+        }
+
+        .nw-offer-code,
+        .nw-offer-content {
+            font-family: Avenir-NextBold
+        }
+
+        .nw-color-list {
+            position: relative;
+            width: 100%
+        }
+
+        .nw-color-border {
+            margin-top: 12px;
+            border-bottom: 1px solid #e8e8e8;
+            width: 100%
+        }
+
+        @keyframes slideBottomUp {
+            0% {
+                -webkit-transform: translateY(100%);
+                transform: translateY(100%)
+            }
+
+            to {
+                -webkit-transform: translate(0);
+                transform: translate(0)
+            }
+        }
+
+        .nw-store-header {
+            margin: 30px 0 10px;
+            width: 100%;
+            background: #f2f2f2;
+            font-weight: 600;
+            line-height: 35px
+        }
+
+        .nw-mastertemplate-sectioncomponent {
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            margin: 0;
+            height: 100%
+        }
+
+        .nw-mastertemplate-subcomponent {
+            padding: 0
+        }
+
+        .nw-mt-sectionnextsection {
+            margin: 0 0 40px
+        }
+
+        .nw-mt-componentnextcomponent {
+            margin: 0 0 24px
+        }
+
+        .nw-mt-nw.nw-mt-section {
+            padding-bottom: 0
+        }
+
+        .nw-storycomponent {
+            position: relative;
+            overflow: hidden
+        }
+
+        .nw-storycomponent-anchor {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: #000;
+            text-decoration: none
+        }
+
+        .nw-storycomponent-videoicon {
+            position: absolute;
+            z-index: 2;
+            font-size: 50px;
+            color: #fff
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-storycomponent-videoicon {
+                font-size: 64px
+            }
+        }
+
+        .nw-storycomponent-imagewrapper {
+            width: 100%;
+            height: 0
+        }
+
+        .nw-storycomponent-image {
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            left: 0;
+            right: 0
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-storycomponent-image {
+                left: -1px;
+                right: -1px
+            }
+        }
+
+        .nw-storycomponent-content {
+            position: relative;
+            padding: 10px 0;
+            background: #fff;
+            text-align: center;
+            word-break: break-word
+        }
+
+        .nw-storycomponent-blog {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            display: flex
+        }
+
+        .nw-storycomponent-authordetails {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-storycomponent-authordetails {
+                width: 50%;
+                padding: 0 10px
+            }
+        }
+
+        .nw-sectioncarousel {
+            justify-content: center;
+            margin: 0;
+            width: 100%
+        }
+
+        .nw-sectioncarousel-container {
+            padding: 0
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-sectioncarousel-container {
+                width: 100%
+            }
+        }
+
+        .nw-sectioncarouselenclose {
+            flex-wrap: nowrap;
+            display: flex;
+            overflow: hidden;
+            width: 100%
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-sectioncarouselitem.is-single {
+                flex: 0 0 auto;
+                width: 100%
+            }
+        }
+
+        .nw-sectioncarousel-button-container {
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            max-width: 50px;
+            padding: 0
+        }
+
+        .nw-sectioncarousel-button-container.is-single {
+            position: absolute;
+            height: 100%
+        }
+
+        .nw-sectioncarousel-button-container.is-single.is-left {
+            left: 0
+        }
+
+        .nw-sectioncarousel-button-container.is-single.is-right {
+            right: 0
+        }
+
+        .nw-sectioncarousel-button {
+            border: 0;
+            font-size: 40px
+        }
+
+        .nw-sectioncarousel-button:disabled {
+            border: 0 !important
+        }
+
+        .nw-storycarousel-dotswrapper {
+            margin-top: 15px
+        }
+
+        .nw-storycarousel-dots {
+            margin: 0 5px;
+            border: 0;
+            border-radius: 100%;
+            width: 8px;
+            height: 8px;
+            background: #c5c5c5
+        }
+
+        .nw-storycarousel-dots.is-active {
+            background: #797979
+        }
+
+        .nw-storygridcontainer {
+            margin: 0;
+            width: 100%
+        }
+
+        .nw-storygridcontainer .nw-storycomponent {
+            margin: 0 0 20px
+        }
+
+        .nw-storygridcolumn {
+            padding: 0 10px
+        }
+
+        .nw-mt-titlecomponenttitle {
+            margin: 0;
+            padding: 0 10px;
+            font-size: 24px;
+            font-family: Avenir-Next;
+            text-align: center;
+            letter-spacing: .7px
+        }
+
+        .nw-mt-titlecomponenttitle.is-section {
+            font-size: 30px;
+            font-family: Avenir-Next
+        }
+
+        .nw-order-content {
+            margin-top: 32px
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-order-content {
+                margin-top: 40px
+            }
+        }
+
+        .nw-order-wrapper {
+            margin-top: -32px
+        }
+
+        .nw-order-container {
+            padding: 0 7.5px
+        }
+
+        .nw-order-button {
+            border: 2px solid transparent;
+            width: 136px;
+            height: 40px;
+            padding: 12px;
+            font-size: .66667rem;
+            font-weight: 900;
+            text-align: center;
+            text-transform: uppercase
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-order-button {
+                height: 0;
+                padding: 15px 0;
+                background: 0 0;
+                text-align: left;
+                color: #f09
+            }
+        }
+
+        .nw-favorites {
+            padding: 16px
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-favorites {
+                margin: auto;
+                max-width: 1230px;
+                padding: 16px 0
+            }
+        }
+
+        .nw-favorites-row {
+            align-items: center;
+            height: 100%;
+            text-align: center
+        }
+
+        .nw-loyalty-container {
+            padding: 0 0 0 20px
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-loyalty-container {
+                padding-left: 40px
+            }
+        }
+
+        .nw-loyalty-value {
+            margin-right: 10px
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-loyalty-value {
+                float: right;
+                margin: 0 -15px 0 0
+            }
+        }
+
+        .nw-mainnav-items {
+            position: relative;
+            top: 3px;
+            display: flex;
+            height: calc(100% - 3px);
+            font-size: .77778rem;
+            font-family: Avenir-NextBold
+        }
+
+        .nw-mainnav-link {
+            align-items: center;
+            display: flex;
+            padding: 0 11px;
+            color: #000;
+            text-decoration: none;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px
+        }
+
+
+
+        .nw-mainnav-link:hover {
+            color: #f39
+        }
+
+        .nw-mainnav-text {
+            position: relative;
+            top: -1px
+        }
+
+        .nw-navtreenew-holder {
+            padding-top: 0
+        }
+
+        .nw-navigation {
+            display: flex;
+            margin: 0 auto
+        }
+
+        .nw-navigation-list {
+            justify-content: space-evenly;
+            display: flex;
+            margin: 0;
+            width: 100%;
+            min-height: 44px;
+            padding: 0;
+            list-style: none;
+            white-space: nowrap;
+            letter-spacing: 1.5px
+        }
+
+        .nw-navtreev2-list {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            font-size: .66667rem;
+            list-style: none
+        }
+
+        .nw-navtreev2-level2 {
+            width: 100%;
+            padding: 30px 12px;
+            background: #fff
+        }
+
+        .nw-navtreev2-link {
+            display: block;
+            color: #000;
+            text-decoration: none
+        }
+
+        .nw-navtreev2-link:hover {
+            color: #f39
+        }
+
+        .nw-navtreev2-link-level2 {
+            font-family: Avenir-NextBold;
+            color: #000
+        }
+
+        .nw-navtreev2-items2 {
+            display: inline-block;
+            margin-bottom: 20px;
+            min-width: 140px;
+            padding: 0 50px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        .nw-navtreev2-image {
+            max-height: 250px
+        }
+
+        .nw-navlist-wrapper {
+            position: absolute;
+            z-index: 2;
+            top: 100%;
+            left: 0;
+            display: none;
+            overflow: auto;
+            margin: 0 auto;
+            box-shadow: 0 25px 60px -43px rgba(0, 0, 0, .5);
+            width: 100%;
+            min-height: 170px;
+            max-height: calc(100vh - 171px);
+            padding-top: 1px;
+            background-color: #fff
+        }
+
+        .nw-navlist-wrapper.is-active {
+            display: block
+        }
+
+        .nw-sub-navtreeholder2 {
+            justify-content: center;
+            display: flex;
+            width: 100%
+        }
+
+        .nw-navlist-container {
+            display: flex;
+            margin: 0 0 auto;
+            max-width: 1230px
+        }
+
+        .nw-sub-navbuttoncontainer {
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            font-size: .77778rem
+        }
+
+        .nw-searchbar-container {
+            position: relative
+        }
+
+        .nw-searchbar-container.show-border {
+            border-bottom: 1px solid #cfcccc
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-searchbar-container {
+                background: #eeeff0
+            }
+        }
+
+        .nw-mybagbutton {
+            position: relative
+        }
+
+        @media screen and (max-width:769px) {
+            .nw-mybagbutton {
+                padding: 0
+            }
+        }
+
+        .nw-mybagbutton-text {
+            position: absolute;
+            top: 2px;
+            left: 13px;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            font-size: .77778rem;
+            color: #f39
+        }
+
+        .nw-mybagbutton-icon {
+            font-weight: 600
+        }
+
+        .nw-header-container {
+            min-height: 52px
+        }
+
+        @keyframes mobileMenuRightSlideIn {
+            0% {
+                -webkit-transform: translate(100%);
+                transform: translate(100%)
+            }
+
+            to {
+                -webkit-transform: translate(0);
+                transform: translate(0)
+            }
+        }
+
+        @keyframes mobileMenuLeftSlideIn {
+            0% {
+                -webkit-transform: translate(-100%);
+                transform: translate(-100%)
+            }
+
+            to {
+                -webkit-transform: translate(0);
+                transform: translate(0)
+            }
+        }
+
+        .nw-searchbar-suggestionscontainer {
+            position: absolute;
+            z-index: 101;
+            overflow: hidden;
+            width: 100%;
+            background: #fff
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-searchbar-suggestionscontainer {
+                opacity: 0;
+                transition: opacity 0s, visibility 0s;
+                visibility: hidden;
+                will-change: opacity, visibility
+            }
+
+            .nw-searchbar-suggestionscontainer.is-active {
+                transition: opacity .4s ease-in, visibility .4s ease-in;
+                box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .2)
+            }
+        }
+
+        .nw-searchbar-suggestionscontainer.is-active {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .nw-searchbar-suggestionsul {
+            padding: 0 20px;
+            list-style: none
+        }
+
+        .nw-searchbar-suggestionsul:last-child {
+            margin-top: 25px
+        }
+
+        .nw-searchbar-suggestionstitle {
+            margin: 30px 0 12px;
+            font-size: .77778rem;
+            font-weight: 600
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-searchbar-suggestionstitle {
+                margin: 17px 0 12px
+            }
+        }
+
+        .nw-searchbar-suggestionsitem {
+            border-bottom: 1px solid hsla(0, 0%, 94.9%, .6);
+            padding: 20px 0;
+            cursor: pointer;
+            font-size: .77778rem
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-searchbar-suggestionsitem {
+                padding: 16px 0
+            }
+        }
+
+        .nw-searchbar-suggestionsitem:hover {
+            color: #f39
+        }
+
+        .nw-searchbar-suggestionsitem:last-child {
+            border: 0
+        }
+
+        .nw-searchbar-formcontainer {
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex
+        }
+
+        .nw-searchbar-formcontainer.is-active {
+            z-index: 100
+        }
+
+        .nw-searchbar-form {
+            width: 100%
+        }
+
+        .nw-searchbar-leftbutton {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            border: 0;
+            height: 100%;
+            padding: 0;
+            color: #000
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-searchbar-leftbutton {
+                color: #f39
+            }
+        }
+
+        .nw-searchbar-leftsearchicon {
+            display: inline-block;
+            width: 17px;
+            font-size: .88889rem;
+            font-weight: 600
+        }
+
+        .nw-searchbar-toggleablecontents {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            overflow: hidden;
+            transition: width .5s ease-in-out;
+            margin: 0 0 0 32px;
+            width: 100%;
+            will-change: width
+        }
+
+        .nw-searchbar-input {
+            margin-right: 26px;
+            border: 0;
+            width: 90%;
+            font-size: .77778rem
+        }
+
+        @media screen and (max-width:768px) {
+            .nw-searchbar-input {
+                padding: 20px 17px;
+                background: #eeeff0
+            }
+        }
+
+        .nw-searchbar-rightbutton {
+            position: absolute;
+            right: 0;
+            display: none;
+            border: 0;
+            padding: 10px;
+            font-size: 1.22222rem;
+            color: #000
+        }
+
+        @media screen and (min-width:769px) {
+            .nw-searchbar-rightbutton {
+                color: #f39
+            }
+        }
+
+        .nw-favoriteslink {
+            border: 0;
+            color: #000;
+            text-decoration: none
+        }
+
+        .nw-favoriteslink-icon {
+            font-weight: 600;
+            color: #f39
+        }
+
+        .nw-favoriteslink-icon.is-havingtext {
+            margin-right: 10px
+        }
+
+        .nw-loginbutton {
+            border: 0
+        }
+
+        .nw-loginbutton-icon {
+            margin-right: 10px;
+            font-weight: 600;
+            color: #f39
+        }
+
+       
+
+        .nw-brandnavcontainernew-list {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            border-top: 2px solid #e4e4e4;
+            border-right: 2px solid #e4e4e4;
+            min-width: 200px;
+            width: calc(50% - 465px);
+            height: 100%;
+            padding: 10px 0;
+            background: #fff;
+            list-style: none
+        }
+
+       </style>
+        </head>
+        
+        <body>
+            <div id="root">
+                <div>
+        
+                    <div class="nwc-grid-row nw-brandheader-mainbarrow">
+                        <div class="nwc-grid-col nwc-grid-col-xs nw-brandheader-logocol"><a href="index.html" target="_self"
+                                class="nw-logo-link nw-brandheader-logo nwc-anchortag"><img class="nwc-img nw-logo-img"
+                                    src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png"
+                                    alt="SEPHORA Logo" /></a></div>
+                        <div class="nwc-grid-col nw-brandheader-mainbarcol">
+                            <div class="nwc-grid-row nw-brandheader-maibarrowcols">
+                                <div class="nwc-grid-col nwc-grid-col-xs nw-brandheader-searchbarcol">
+                                    <div class="nw-searchbar-container  show-border">
+                                        <div class="nw-searchbar-formcontainer "><button type="button"
+                                                class="nwc-btn nw-searchbar-leftbutton" tabindex="0"><i
+                                                    class="icomoon-search3 nw-searchbar-leftsearchicon"></i></button>
+                                            <div class="nw-searchbar-toggleablecontents ">
+                                                <form class="nw-searchbar-form"><input type="text" id="1715984657"
+                                                        class="nwc-inp  nw-searchbar-input" tabindex="0" value=""
+                                                        placeholder="Search SEPHORA" autoComplete="off" /></form>
+                                                <button type="button" class="nwc-btn nw-searchbar-rightbutton "
+                                                    tabindex="0"><span>x</span></button>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="nwc-grid-col nwc-grid-col-xs nw-brandheader-logocol"></div>
+                                <div class="nwc-grid-col nwc-grid-col-xs nw-brandheader-buttonscol"><a href="/favorites"
+                                        target="_self" class="nwc-btn nw-favoriteslink nw-header-linksbtns nwc-anchortag"><i
+                                            class="icomoon-heart-o nw-favoriteslink-icon "></i><span
+                                            class="nw-favoriteslink-text"></span></a><span
+                                        class="nw-header-seperator">|</span><button type="button" class="nwc-btn 
+                            nwc-btn-primary-txt
+                            nw-mybagbutton
+                            nw-header-linksbtns
+                          " tabindex="0"><i class="icomoon-bag1 nw-mybagbutton-icon"></i></button><span
+                                        class="nw-header-seperator">|</span><button type="button"
+                                        class="nwc-btn nw-loginbutton nw-header-linksbtns" tabindex="0"><i
+                                            class="icomoon-person1 nw-loginbutton-icon"></i><span
+                                            class="nw-loginbutton-text">Login</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nwc-grid-row nw-brandheader-navigationrow">
+                        <div class="nwc-grid-col nw-brandheader-navigationcol">
+                            <nav class="nw-navigation ">
+                                <ul class="nw-navigation-list">
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/makeup"
+                                            to="https://sephora.nnnow.com/makeup" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span
+                                                class="nw-mainnav-text">MAKEUP</span></a>
+                                    </li>
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/skincare"
+                                            to="https://sephora.nnnow.com/skincare" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span
+                                                class="nw-mainnav-text">SKINCARE</span></a></li>
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/fragrance"
+                                            to="https://sephora.nnnow.com/fragrance" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span
+                                                class="nw-mainnav-text">FRAGRANCE</span></a></li>
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/haircare"
+                                            to="https://sephora.nnnow.com/haircare" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span
+                                                class="nw-mainnav-text">HAIRCARE</span></a></li>
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/makeup-tools-and-brushes"
+                                            to="https://sephora.nnnow.com/makeup-tools-and-brushes" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span class="nw-mainnav-text">TOOLS &amp;
+                                                BRUSHES</span></a></li>
+                                    <li class="nw-mainnav-items"><a href="https://sephora.nnnow.com/brandslist"
+                                            to="https://sephora.nnnow.com/brandslist" target="_self"
+                                            class="nw-mainnav-link   nwc-anchortag"><span
+                                                class="nw-mainnav-text">BRANDS</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+        
+             
+                </header>
+        </body>
+        
+        </html>
