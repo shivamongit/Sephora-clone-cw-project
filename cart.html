@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="shortcut icon" href="https://static.nnnow.com/client/assets/images/favicon.ico">
+    <style>
+        .btn,
+        article,
+        body,
+        button,
+        div,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        html,
+        input,
+        label,
+        li,
+        ol,
+        p,
+        span,
+        ul {
+            font-family: Roboto, sans-serif;
+        }
+
+      
+
+       
+
+
+        .body1 {
+            background-color: #F4F4F4;
+        }
+
+     
+
+
+        .mainBox {
+            margin-left: 17%;
+            width: 82%;
+            height: 200%;
+            margin-top: 1%;
+            background-color: #FFFFFF;
+            background-repeat: unset;
+        }
+
+        #medicine {
+            margin: 5% 5% 10% 5%;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+
+        .body2 {
+            background-color: #FFFFFF;
+        }
+
+        .cartBox {
+            width: 80%;
+            margin: 3% auto;
+            background-color: #FFFFFF;
+        }
+
+        .smallDiv {
+            width: 100%;
+            background-color: #F4F4F4;
+        }
+
+        .small1 {
+            display: inline-block;
+            width: 40%;
+            margin-left: 3%;
+            font-size: 15px;
+        }
+
+        .small2 {
+            display: inline-block;
+            width: 50%;
+            margin-left: 2%;
+            vertical-align: top;
+        }
+
+        .cont1 {
+            width: 40%;
+            height: 40px;
+            background-color: #FFFFFF;
+            color: #f138c9;
+            border: 1px solid #666666;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-top: 3%;
+            display: inline-block;
+        }
+
+        .cont2 {
+            width: 30%;
+            height: 40px;
+            background-color: #f138c9;
+            font-size: 20px;
+            color: #f138c9;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+            margin-top: 1%;
+            margin-left: 2%;
+            display: inline-block;
+        }
+
+        .cont3 {
+            width: 15%;
+            height: 20px;
+            background-color: #f138c9;
+            font-size: 12px;
+            color: #f138c9;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+            margin-top: 1%;
+            margin-left: 2%;
+            display: inline-block;
+        }
+
+        input {
+            border: none;
+            outline: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #b7b7b7;
+            transition: .6s;
+        }
+
+        .a {
+            background-color: #F4F4F4;
+        }
+    </style>
+</head>
+
+<body class="body1">
+   
+    
+    <div class="cartBox">
+        <h1 style="font-weight:initial;margin: 1% 4%;">Shopping Cart</h1>
+        <hr>
+        <div class="product" id="medicine"></div>
+        <div class="smallDiv">
+            <div class="small1">
+                <p>Safe Buy:100% Money Back Guarantee</p>
+                <p>Live Easy:15 Days Easy Return Policy</p>
+                <p>Top Notch:Genuine Products Guarantee</p>
+            </div>
+            <div class="small2">
+                <div>
+                    <div style="margin-top: 1%;">
+
+                        <span id="add">
+                            <p style="font-size: 14px; margin-top: 2%;">Total</p>
+                        </span>
+                    </div>
+                </div>
+                <p>Delivery Charge<span style="color:#f138c9;margin-left: 2%;font-weight: bold;">Free</span></p>
+                <hr>
+
+                <div>
+                    <h2>Grand Total</h2>
+                </div>
+                <div style="font-size: 20px; font-weight: bolder;" id="add_qunt">₹</div>
+                <button type="submit" class="cont1"><a href="Product.html" style="font-size: 18px;">Continue
+                        Shopping</a></button>
+                <button type="submit" class="cont2"><a href="Checkout.html"><span
+                            style="font-size: 20px;color: #fff;">Place Order</span><i style="color: #fff;"
+                            class="fa fa-chevron-right cartbuttonanimate"></i></a></button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    let parent = document.getElementById('medicine');
+
+    let cart = JSON.parse(localStorage.getItem("cart"))
+
+    console.log(cart);
+
+    function showProducts() {
+
+        cart.forEach(function (product) {
+
+            let div = document.createElement("div");
+
+            let img = document.createElement("img");
+
+
+
+            img.src = product.img;
+
+
+            let product_prize = document.createElement("p");
+
+            product_prize.textContent = product.price;
+            product_prize.style.fontSize = "20px"
+            product_prize.style.textAlign = "center"
+
+
+            let product_name = document.createElement("p")
+
+            product_name.textContent = product.name;
+            product_name.style.fontSize = "15px"
+            product_name.style.textAlign = "center"
+
+            let addtocart_btn = document.createElement("button");
+
+            addtocart_btn.innerText = "Add to cart";
+
+            addtocart_btn.onclick = function () {
+                addtoCart(product);
+            };
+
+            div.append(img, product_name, product_prize)
+
+            parent.append(div);
+
+        });
+
+        var num = document.createElement("h1");
+        num.textContent = cart.length;
+
+        let added = document.getElementById("add");
+        added.append(num);
+
+        let pr = document.getElementById("pr");
+
+        var total = 0;
+        let total_pr = JSON.parse(localStorage.getItem("cart"));
+
+        total_pr.forEach(function (total_pr) {
+            total = total + +total_pr.price;
+        });
+        add_qunt.append(total);
+        console.log(total);
+    }
+
+
+
+    function check(e) {
+        e.preventDefault();
+        let inp = document.getElementById("input");
+
+        let code = inp.promo.value;
+
+        let mon = document.getElementById("add_qunt");
+
+        if (code === "masai30") {
+            mon.textContent = mon.textContent * 0.7;
+        } else {
+            alert("Please Enter Valid Promo Code")
+        }
+        let pro = document.getElementById("promo");
+        inp.promo.value = "";
+    }
+
+
+
+    showProducts();
+</script>
